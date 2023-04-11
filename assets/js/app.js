@@ -13,12 +13,13 @@ const { createApp } = Vue
     },
 
     mounted() {
-
-        axios.get(this.url)
-        .then( r => {
-            console.log(r);
-            console.log(r.data.response)
-            this.emailList.push(r.data.response)
-        })
+        for (let i = 0; i < 10; i++) {
+            axios.get(this.url)
+            .then( r => {
+                console.log(r);
+                console.log(r.data.response)
+                this.emailList.push(r.data.response)
+            })
+        }
     },
   }).mount('#app')
