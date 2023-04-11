@@ -7,7 +7,7 @@ const { createApp } = Vue
       return {
         titolo: 'Lista di mail',
         url: 'https://flynn.boolean.careers/exercises/api/random/mail',
-        emailList:[],
+        emails:[],
 
       }
     },
@@ -18,7 +18,7 @@ const { createApp } = Vue
             .then( r => {
                 console.log(r);
                 console.log(r.data.response)
-                this.emailList.push(r.data.response)
+                this.emails.push(r.data.response)
             })
         }
     },
