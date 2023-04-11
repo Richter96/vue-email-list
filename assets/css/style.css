@@ -1,0 +1,15 @@
+.container{
+    width: 1000px;
+    margin: auto;
+}
+
+li {
+    font-size: 1.5rem;
+}
+
+.load {
+    color: red;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+}
