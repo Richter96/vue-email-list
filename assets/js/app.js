@@ -6,11 +6,18 @@ const { createApp } = Vue
     data() {
       return {
         titolo: 'Lista di mail',
-        url: 'https://flynn.boolean.careers/exercises/api/random/mail'
+        url: 'https://flynn.boolean.careers/exercises/api/random/mail',
+        emailList:[],
+
       }
     },
 
     mounted() {
-        
+
+        axios.get(this.url)
+        .then( r => {
+            console.log(r);
+            console.log(r.data.response)
+        })
     },
   }).mount('#app')
