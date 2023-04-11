@@ -16,10 +16,10 @@ const { createApp } = Vue
         for (let i = 0; i < 20; i++) {
             console.log(i);
             axios.get(this.url)
-            .then( r => {
-                console.log(r);
-                console.log(r.data.response)
-                this.emails.push(r.data.response)
+            .then( response => {
+                console.log(response);
+                console.log(response.data.response)
+                this.emails.push(response.data.response)
             })
         }
     },
